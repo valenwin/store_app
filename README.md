@@ -4,6 +4,6 @@ To deploy project on your local machine create new virtual environment and execu
 
 `pip install -r requirements.txt`
 
-##Run app:
+## Run app:
 
 `flask run`
