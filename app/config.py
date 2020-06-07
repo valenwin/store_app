@@ -7,6 +7,7 @@ env.read_env()
 
 
 class Config(object):
+    FLASK_ADMIN_SWATCH = 'cerulean'
     SQLALCHEMY_DATABASE_URI = env.str("DATABASE_URL")
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = env.str("SECRET_KEY")
