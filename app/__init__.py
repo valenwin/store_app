@@ -18,12 +18,15 @@ admin = Admin(app, name='Store App', template_mode='bootstrap3')
 
 # Blueprints
 from .products import products_page
+from .cart import cart_page
 
 # Register Blueprints
 app.register_blueprint(products_page, url_prefix='/products')
+app.register_blueprint(cart_page, url_prefix='/cart')
 
 from . import views
 from .products import views, models
+from .cart import views
 
 # Admin register
 from app.products.models import Product
