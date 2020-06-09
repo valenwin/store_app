@@ -1,8 +1,11 @@
 from flask import render_template
 
 from app import app
+from .products.models import Product
 
 
 @app.route('/')
 def index():
-    return render_template('base.html')
+    products = Product.query.all()
+    return render_template('index.html',
+                           products=products)
